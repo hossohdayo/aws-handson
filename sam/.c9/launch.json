@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "training-applicant:HelloWorldFunction",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "training-applicant/template.yaml",
+                "logicalId": "HelloWorldFunction"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "training-applicant:TrainingApplicantFunction",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "training-applicant/template.yaml",
+                "logicalId": "TrainingApplicantFunction"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
+}
